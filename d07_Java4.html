@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <h2>Regular Expression Demo</h2>
+    <hr>
+    <form action="" id="form_check">
+        <div>
+            <label for="">Pin code</label>
+            <input type="text" name="pin" id="name" required>
+        </div>
+        <input type="submit" value="Submit">
+
+    </form>
+</body>
+<script>
+    document.getElementById("form_check").onclick= function(){
+        //ham trim() bo het khoang trang thua o dau va cuoi
+        let pin=document.getElementById("pin").value.trim();
+        //tao bieu thuc qui tac mo ta 1 ma pin hop le: bat dau la P-sau do la 4 so bat ki
+        let re= /P\d{4}/
+        //kiem tra bieu thuc co hop le voi ma pin ddc nhap ko
+        if(re.test(pin)==false){
+            alert("Ma pin ko hop le! Vui long nhap lai! ")
+        }
+    }
+</script>
+
+
+</html>

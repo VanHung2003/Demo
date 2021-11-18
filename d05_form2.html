@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="form.css">
+    
+</head>
+<body>
+    <h2>HTML5 Form Demo</h2>
+    <hr>
+    <form action="d05_table.html" target="hhh" method="get">
+        <fieldset>
+            <legend>Login</legend>
+            <div>
+                <label for="">Username</label>
+                <input type="text" name="user" id="user"
+                required placeholder="Enter your name">
+            </div>
+    
+            <div>
+                <label for="">Password</label>
+                <input type="password" name="pass" id="pass"
+                required placeholder="123456">
+            </div>
+
+            <div>
+                <label for="">Email</label>
+                <input type="email" name="email" id="email"
+                required placeholder="nguyenvanA@gmai.com">
+            </div>
+
+            <div>
+                <label for="">Birthday</label>
+                <input type="date" name="date" id="date"
+                value="2003-07-27">
+            </div>
+
+            <div>
+                <label for="">City</label>
+                <select name="city" id="city">
+                    <option value="SG">Sài Gòn</option>
+                    <option value="BP" selected>Bình Phước</option>
+                    <option value="BL">Bạc Liêu</option>
+                    <option value="ĐL">ĐắkLẮk</option>
+                    <option value="ĐN">Đà Nẵng</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="">Genther</label>
+                <input type="radio" name="genther" id="genther_male"
+                value="male" checked>Male
+                <input type="radio" name="genther" id="genther_female"
+                value="female">Female
+                <input type="radio" name="genther" id="genther_other"
+                value="other">Other
+            </div>
+
+            <div>
+                <label for="">Favorite Language</label>
+                <input type="checkbox" name="lang_1" id="lang_1"
+                value="C/C++" checked>C/C++
+                <input type="checkbox" name="lang_2" id="lang_2"
+                value="Java" checked>Java
+                <input type="checkbox" name="lang_3" id="lang_3"
+                value="Python">Python
+            </div>
+
+            <div>
+                <label for="">Rate</label>
+                <input type="number" name="rate" id="rate"
+                value="5" min="1" max="5">
+            </div>
+
+            <div>
+                <label for="">Comment</label>
+                <textarea name="comment" id="comment" 
+                cols="30" rows="4"></textarea>
+            </div>
+        </fieldset>
+
+        <div>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+        </div>
+    </form>
+
+
+</body>
+</html>

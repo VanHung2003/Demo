@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>While</title>
+    <link rel="stylesheet" href="form.css">
+    <style>
+        *{
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h2>Javascript while-loop Demo</h2>
+    <hr>
+    <form action="" id="form-sum" name="form-sum">
+        <div>
+            <label for="">Input number</label>
+            <input type="number" name="n" id="n" value="10" min="0" max="200">
+        </div>
+
+        
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+        
+
+        <div>
+            <label for="">Sum</label>
+            <input type="number" name="sum" id="sum" readonly>
+        </div>
+    </form>
+
+    <script>
+        //lap trinh cho su kien bam nut submit
+        document.getElementById("form-sum").onclick=function(e) {
+            e.preventDefault(); //Vo hieu hoa chuc nang submit (ko chuyen sang trang action)
+            
+            //lay du lieu nhap trong o co id = 'n', va doi thanh so nguyen
+            let n = parseInt(document.getElementById("n").value);
+            let sum = 0;
+            let i = 0;
+            while (i <= n){
+                sum += i;
+                i++;
+            }
+    
+            //dat gia tri bien sum (chua tong cua n so nguyen dau tien) vo o co id='sum'
+            document.getElementById("sum").value = sum;
+        }
+    </script>
+
+</body>
+</html>
